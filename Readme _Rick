@@ -1,0 +1,22 @@
+Microwatt-Powered IoT Weather Station
+
+Project Description
+
+The Microwatt-Powered IoT Weather Station showcases how the open-source Microwatt POWER CPU core can serve as the central controller for a lightweight IoT application. The system collects real-time environmental data such as temperature, humidity, and light intensity from simple digital/analog sensors and processes it locally on the Microwatt core. By combining FPGA-based prototyping with open-source toolchains, this project demonstrates how Microwatt can be integrated into practical embedded systems with clear real-world applications.
+
+Design Flow
+	1.	Microwatt CPU on FPGA – Use Yosys, Verilator, and NextPNR to synthesize and simulate the Microwatt CPU core on an FPGA board or virtual environment.
+	2.	Sensor Interface – Connect low-cost sensors (e.g., DHT11 for temperature/humidity, LDR for light) via GPIO, I2C, or SPI.
+	3.	Data Processing – Develop C applications compiled with GCC for POWER, running on Microwatt to perform sensor data acquisition, averaging, and threshold-based checks.
+	4.	Output & Visualization – Display results via UART to a terminal or through basic output devices (LED indicators or a small display).
+	5.	Optional IoT Extension – Extend functionality with Wi-Fi or serial-to-USB to transmit processed data to a PC dashboard or cloud platform for remote monitoring.
+
+Tools & Platforms
+	•	Microwatt CPU Core (OpenPOWER ISA)
+	•	FPGA Simulation/Synthesis Tools: Yosys, Verilator, NextPNR, GHDL
+	•	Software Toolchain: GCC for POWER, GDB
+	•	ChipFoundry OpenFrame SoC Platform for SoC integration
+
+Impact & Relevance
+
+This project is designed to be easy to build yet impactful, demonstrating the potential of open-source RISC architectures in practical IoT solutions. The weather station is modular, extendable, and ideal as a hackathon prototype to showcase how the Microwatt CPU can enable low-cost, open, and accessible edge applications.
